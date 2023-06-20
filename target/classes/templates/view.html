@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html
+        lang="ko"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<th:block th:replace="/layouts/fragments/head :: headFragment"></th:block>
+
+  <body class="knu-wrap">
+    <header class="l-header">
+      <a href="/">
+        <img src="logo.png" width="200px">
+      </a>
+    </header>
+    <section class="l-main">
+      <h1 th:text="${post.title}"></h1>
+      <p>
+        <i class="fa-solid fa-user"></i>
+        <span th:text="${post.author}"></span>
+      </p>
+      <p>
+        <i class="fa-solid fa-calendar-days"></i>
+        <span th:text="${post.createdAt}"></span>
+      </p>
+    </section>
+    <section class="l-post-detail">
+      <p>
+        <span style="white-space: pre-line" th:text="${post.contents}"></span>
+      </p>
+      <a th:href="@{/modify/{id}(id=${post.id})}">
+        <button class="l-update-btn">
+          <i class="fa-solid fa-pen"></i>
+          수정하기
+        </button>
+      </a>
+    </section>
+    <footer class="l-footer">
+      <p>2023 LIKELION KNU</p>
+    </footer>
+  </body>
+</html>

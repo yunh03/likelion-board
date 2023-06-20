@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquareNeo-Variable', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+input, textarea {
+    font-family: 'NanumSquareNeo-Variable', Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.knu-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.l-header {
+    padding-top: 30px;
+}
+
+input.l-input.author {
+    width: 95%;
+}
+
+.l-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.l-main h1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.l-main h2 {
+    font-size: 15px;
+    color: #269AD4;
+    text-decoration: none;
+}
+
+.l-main a {
+    color: #269AD4;
+    text-decoration: none;
+}
+
+.l-main i {
+    padding-left: 7px;
+    vertical-align: -1px;
+}
+
+.l-main p .fa-calendar-days {
+    padding-left: 0px !important;
+    padding-right: 7px !important;
+}
+
+.l-main p .fa-circle-info {
+    padding-left: 0px !important;
+    padding-right: 7px !important;
+}
+
+.l-main p .fa-user {
+    padding-left: 0px !important;
+    padding-right: 7px !important;
+}
+
+.l-main a:hover {
+    text-decoration: none;
+}
+
+.l-main p {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.l-input:read-only {
+    color: #000000 !important;
+    background-color: #efefef !important;
+}
+
+.l-input {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    width: 100%;
+    line-height: 30px;
+    color: #828282;
+    margin-bottom: 10px;
+    border: 0.87px solid #BDBDBD;
+    transition: 0.5s;
+}
+
+.l-input:focus {
+    border: 0.87px solid #269AD4;
+    color: #000000;
+    transition: 0.5s;
+}
+
+.l-btn {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #269AD4;
+    background-color: transparent;
+    border: 0.87px solid #269AD4;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.l-btn:hover {
+    background-color: #269AD4;
+    border: 0.87px solid #269AD4;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.l-btn i {
+    padding-right: 8px;
+    vertical-align: -1px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.l-post-detail {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.l-post-detail p {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.l-post-box-wrap {
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.l-post-box-wrap a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.l-post-box {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.l-post-box:hover {
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.l-post-box p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.l-post-box i {
+    padding-right: 10px;
+}
+
+.l-post-box .fa-calendar-days {
+    padding-left: 10px;
+}
+
+.l-del-btn {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #e74646;
+    background-color: transparent;
+    border: 0.87px solid #e74646;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.l-del-btn i {
+    padding-right: 8px;
+    vertical-align: -1px;
+}
+
+.l-del-btn:hover {
+    background-color: #e74646;
+    border: 0.87px solid #e74646;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.l-update-btn {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #269AD4;
+    background-color: transparent;
+    border: 0.87px solid #269AD4;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.l-update-btn i {
+    padding-right: 8px;
+    vertical-align: -1px;
+}
+
+.l-update-btn:hover {
+    background-color: #269AD4;
+    border: 0.87px solid #269AD4;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.l-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.l-footer p {
+    font-size: 12px;
+    opacity: 0.6;
+    color: #000000;
+}

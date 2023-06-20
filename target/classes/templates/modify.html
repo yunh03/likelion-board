@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html
+        lang="ko"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<th:block th:replace="/layouts/fragments/head :: headFragment"></th:block>
+
+  <body class="knu-wrap">
+    <header class="l-header">
+      <a href="/">
+        <img src="../logo.png" width="200px">
+      </a>
+    </header>
+    <section class="l-main">
+      <h1>글 수정</h1>
+      <p>
+        <i class="fa-solid fa-circle-info"></i>
+        사전에 설정된 비밀번호가 일치해야 글을 수정할 수 있어요.
+      </p>
+    </section>
+    <section class="l-new">
+      <form th:action="@{/modify/{id}(id=${post.id})}" method="post">
+        <div class="input-group">
+          <input type="text" class="l-input" name="title" th:value="${post.title}" placeholder="제목을 입력하세요.">
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <input type="text" class="l-input author" th:value="${post.author}" name="author" placeholder="작성자" id="inputFieldKr" readonly>
+          </div>
+          <div class="col-sm-4">
+            <input type="password" class="l-input" name="password" id="inputField" placeholder="비밀번호(4자)">
+          </div>
+        </div>
+        <div class="input-group">
+          <textarea type="text" class="l-input" name="contents" th:text="${post.contents}" placeholder="내용을 입력하세요."></textarea>
+        </div>
+        <div class="input-group">
+          <button type="submit" class="l-btn">
+            <i class="fa-solid fa-pen"></i>
+            수정하기
+          </button>
+          <a th:href="@{/modify/delete/{id}(id=${post.id})}">
+            <button type="button" class="l-del-btn">
+              <i class="fa-solid fa-trash"></i>
+              삭제하기
+            </button>
+          </a>
+        </div>
+      </form>
+    </section>
+    <footer class="l-footer">
+      <p>2023 LIKELION KNU</p>
+    </footer>
+    <script>
+      var inputField = document.getElementById('inputField');
+
+      inputField.addEventListener('input', function() {
+        var inputValue = inputField.value;
+        var numericValue = inputValue.replace(/\D/g, '');
+
+        if (numericValue.length > 4) {
+          numericValue = numericValue.slice(0, 4);
+        }
+
+        inputField.value = numericValue;
+      });
+    </script>
+    <script>
+      var inputFieldKr = document.getElementById('inputFieldKr');
+
+      inputFieldKr.addEventListener('input', function() {
+        var inputValueKr = inputFieldKr.value;
+        var alphanumericHangulValue = inputValueKr.replace(/[^a-zA-Z0-9ㄱ-ㅎ가-힣]/g, '');
+
+        if (alphanumericHangulValue.length > 4) {
+          alphanumericHangulValue = alphanumericHangulValue.slice(0, 4);
+        }
+
+        inputFieldKr.value = alphanumericHangulValue;
+      });
+    </script>
+  </body>
+</html>
